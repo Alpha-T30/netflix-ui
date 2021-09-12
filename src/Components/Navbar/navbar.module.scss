@@ -1,0 +1,144 @@
+@import '../../app.scss' ; 
+
+.navbar{
+    position: fixed;
+    height: 70px;
+    top: 0;
+    width: 100%;
+    z-index: 988;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+    transition: all 3s ease;
+    &.navscroll{
+        
+        background-color: var(--main-color);
+    }
+    
+    .container{
+        padding: 0 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+            padding: 0;
+        }
+
+        
+        
+
+        .left{
+            display: flex;
+            align-items: center ; 
+            @include mobile {
+                margin-left: 4px;
+            }
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+                @include mobile {
+                 display: none;   
+                }
+
+                &.keep{
+                    margin-right: 20px;
+                    @include mobile {
+                        display: block;
+                        margin-left: 0px;
+                        font-weight: bolder;
+                        margin-right: 9px;
+                    }
+                }
+               
+            }
+           
+            img{
+                height: 40px;
+                cursor: pointer;
+                margin-right: 30px;
+
+                @include mobile {
+                  display: none;   
+                }
+        
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            span{
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .icon{
+                margin-right: 20px;
+                margin-left: 20px;
+                cursor: pointer;
+                @include mobile {
+                    margin-left: 10px; 
+                    margin-right: 10px;
+                }
+            }
+        
+
+            img{
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                 margin-right: 10px;
+                 cursor: pointer;
+                 @include mobile {
+                        display: none;
+                }
+            }
+            .profile{
+                cursor: pointer;
+                @include mobile {
+                    width: 30px;
+                     margin-right: 20px;
+                  
+                    .icon{
+                         margin-right: 10px;
+                    }
+                }
+                 
+                .options{
+                     
+                    padding: 5px;
+                    
+                    border-radius: 5px;
+                    background-color: var(--main-color);
+                    
+                   
+                    display: none
+                    
+                    
+                }
+                &:hover{
+                   
+                    .options{
+                        display: flex;
+                    position: absolute;
+          
+                    
+                    flex-direction: column;
+                    @include mobile {
+                        right: 0;
+                    }
+                    span{
+                        cursor: pointer;
+                        padding: 10px;
+                    }
+                   
+                  
+
+
+                    }
+                }
+            }
+        }
+    }
+}
